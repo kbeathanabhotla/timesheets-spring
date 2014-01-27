@@ -1,0 +1,79 @@
+var index = 0;
+			
+			
+			/*  $("#worklogTable").each(function(){
+				    if($('tbody', this).length > 0){
+				        $('tbody tr:last', this).append(addRemoveButtons);
+				    }else {
+				        $('tr:last', this).append(addRemoveButtons);
+				    }
+				});  */
+			
+			/*  $("#addButton").click(function(){
+					alert("add button"); 
+				 }); */
+			 
+				// $(document).ready(function(){
+					 $("#addButton").click(function() {
+						
+						 $('#worklogTable tbody>tr:last').clone(true).insertAfter('#worklogTable tbody>tr:last');
+				          return false;
+				        });
+					 
+				 $("#removeButton").click(function(){
+						alert("remove button"); 
+					 });
+				// });
+				 
+				
+				 
+			/*$("[id ^=removeButton]").click(function(){
+				
+				alert("remove button");
+				
+				/* $('#worklogTable').each(function(){
+				    if($('tbody', this).length > 0){
+				        $('tbody tr:last', this).remove();
+				    }else {
+				        $('tr:last', this).remove();
+				    }
+				}); 
+			});*/
+			
+			/*$("[id ^=addButton]").click(function(){
+				
+				alert("add button");
+				
+				$("[id ^=addButton]").hide();
+				
+				 $('#worklogTable').each(function(){
+				    if($('tbody', this).length > 0){
+				        $('tbody tr:last', this).remove();
+				    }else {
+				        $('tr:last', this).remove();
+				    }
+				}); 
+			});*/
+			
+			
+			
+			
+			//$('#worklogTable').append('<tr valign="top"><th scope="row"><label for="customFieldName">Custom Field</label></th><td><input type="text" class="code" id="customFieldName" name="customFieldName[]" value="" placeholder="Input Name" /> &nbsp; <input type="text" class="code" id="customFieldValue" name="customFieldValue[]" value="" placeholder="Input Value" /> &nbsp; <a href="javascript:void(0);" id="removeButton">Remove</a></td></tr>');
+				 
+				 var row = $('#worklogTable tr:last').prev().clone(true);
+				 
+				 row.find('#addAndRemoveButton').html('<button type="button" id="removeButton" class="btn btn-info">Remove</button>');
+				 
+				 
+				 console.log(row.html());
+				 
+				 
+				 /* console.log(i);
+				 //row.html().replace(/0/g, i);
+				 i++;
+				 console.log(row.html());
+				  */
+				 var bol = row.insertAfter($('#worklogTable tr:last').prev());
+				 
+				 //console.log(bol);
+		          //return false;
