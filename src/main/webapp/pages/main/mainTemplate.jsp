@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/timesheets/pages/css/bootstrap.min.css">
 <script src="/timesheets/pages/js/jquery-1.10.2.min.js"></script>
 <script src="/timesheets/pages/js/bootstrap.min.js"></script>
- 
+  
 <title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute>
 </title>
 </head>
@@ -31,7 +31,7 @@
 		<div style="position: absolute; left:0px; width:11%;padding-left:5px;">
 			<tiles:insertAttribute name="menu"></tiles:insertAttribute>
 		</div>
-		<div style="position: absolute; left:10%; width:88%">
+		<div style="position: absolute; left:10%; width:87%">
 			<tiles:insertAttribute name="body"></tiles:insertAttribute>
 		</div>
 	</div>

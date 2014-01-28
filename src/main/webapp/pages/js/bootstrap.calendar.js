@@ -208,7 +208,7 @@
                     ){
                         cls = "selectedDay";
                     }else if(j%7 == 0 || j%7 == 6){
-                        cls = "day weekend";
+                        cls = "weekend";
                     }else{
                         cls = "day";
                     }

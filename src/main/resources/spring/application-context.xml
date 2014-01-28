@@ -11,10 +11,9 @@
 	<context:annotation-config />
 	<context:component-scan base-package="com.tagcmd.timesheets" />
 
-	<!-- <bean id="demoDataInitializer" class="com.tagcmd.timesheets.admin.DemoDataInitializer">
-		<property name="initializeDemoActivities" value="true"></property>
-		<property name="initializeDemoUsers" value="true"></property>
-	</bean> -->
+	<!-- <bean id="demoDataInitializer" class="com.tagcmd.timesheets.admin.DemoDataInitializer"> 
+		<property name="initializeDemoActivities" value="true"></property> <property 
+		name="initializeDemoUsers" value="true"></property> </bean> -->
 
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"
 		id="viewResolver">
@@ -23,6 +22,13 @@
 				org.springframework.web.servlet.view.tiles2.TilesView
 			</value>
 		</property>
+		<property name="order" value="1"></property>
+	</bean>
+
+	<bean class="org.springframework.js.ajax.AjaxUrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.js.ajax.tiles2.AjaxTilesView" />
+		<property name="order" value="2"></property>
 	</bean>
 
 	<bean id="tilesConfigurer"
